@@ -6,22 +6,23 @@ class Program
     {
         // asks the user for a number
         Console.Write("What is the magic number?");
-        string magic_number = Console.ReadLine();
-        int magic_number_int  = int.Parse(magic_number);
+        int magic_number  = int.Parse(Console.ReadLine());
         
-        Console.WriteLine("What is your guess?");
-        string guess = Console.ReadLine();
-        int user_guess = int.Parse(guess);
+       
+        int guess = -1;
 
-        while (user_guess != magic_number_int)
+        while (guess != magic_number)
         {
-            if (magic_number_int > user_guess)
+            Console.WriteLine("What is your guess?");
+            guess = int.Parse(Console.ReadLine());
+
+            if (magic_number > guess)
             {
                 Console.WriteLine("Higher");
                 
             }
 
-            else if (magic_number_int < user_guess)
+            else if (magic_number < guess)
             {
                 Console.WriteLine("Lower");
             }
