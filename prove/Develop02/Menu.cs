@@ -1,7 +1,7 @@
 public class Menu
 {
    
-Dictionary<string,string> _usedPrompts = new Dictionary<string,string>();
+// Dictionary<string,string> _usedPrompts = new Dictionary<string,string>();
 Prompt prompt = new Prompt();
 Journal journal = new Journal();
 

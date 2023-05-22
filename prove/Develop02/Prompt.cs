@@ -17,9 +17,9 @@ public class Prompt
 
      public void NicePrint(string item)
     {
-        Console.WriteLine("-----------------------------------");
+        Console.WriteLine("----------------------------------------------------------------");
         Console.WriteLine($"{item}");
-        Console.WriteLine("-----------------------------------");
+        Console.WriteLine("----------------------------------------------------------------");
     }
 
      public string Getprompts()
