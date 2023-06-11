@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop04 World!");
+        Console.WriteLine("Welcome to the Relaxation program!");
+        Menu menu = new Menu();
+        menu.displayMenu();
     }
 }
