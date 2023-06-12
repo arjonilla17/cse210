@@ -25,6 +25,7 @@ public class Menu{
                 case "1":
                     breathing.breathingBase();
                     activity.activityDuration();
+                    // activity.pause();
                     breathing.breathingEndMessage();
                     
                     break;

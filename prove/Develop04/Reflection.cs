@@ -1,6 +1,7 @@
 public class Reflection{
 
     Activity activity = new Activity();
+    
 
      private List<string> _prompts = new List<string>();
 

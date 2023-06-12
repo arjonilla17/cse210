@@ -1,4 +1,5 @@
 public class Activity{
+
     protected string _name;
 
     protected string _description;
@@ -11,9 +12,12 @@ public class Activity{
 
     public void activityDuration(){
         Console.WriteLine("How long, in seconds, would you like for your session?");
-        int sessionDuration = Convert.ToInt32(Console.ReadLine());
+        int sessionDuration = int.Parse(Console.ReadLine());
         Console.WriteLine("Your session will last for: " + sessionDuration + " seconds");
         Console.WriteLine("");
+        //
+        pause();
+        
     }
 
     public void display(){
@@ -25,6 +29,14 @@ public class Activity{
     }
 
     public void pause(){
+        Console.WriteLine("Get ready...");
+        _seconds = sessionDuration * 1000;
+        Console.WriteLine(_seconds);
+        Console.Write("+");
+        Thread.Sleep(_seconds);
+        Console.Write("\b \b");
+        Console.Write("-"); 
+
 
     }
 
