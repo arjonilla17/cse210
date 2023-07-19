@@ -16,7 +16,13 @@ public class Activity{
         Console.WriteLine("Your session will last for: " + sessionDuration + " seconds");
         Console.WriteLine("");
         //
-        pause();
+        Console.WriteLine("Get ready...");
+        _seconds = sessionDuration * 1000;
+        Console.WriteLine(_seconds);
+        Console.Write("+");
+        Thread.Sleep(_seconds);
+        Console.Write("\b \b");
+        Console.Write("-");
         
     }
 
@@ -29,13 +35,13 @@ public class Activity{
     }
 
     public void pause(){
-        Console.WriteLine("Get ready...");
-        _seconds = sessionDuration * 1000;
-        Console.WriteLine(_seconds);
-        Console.Write("+");
-        Thread.Sleep(_seconds);
-        Console.Write("\b \b");
-        Console.Write("-"); 
+        // Console.WriteLine("Get ready...");
+        // _seconds = sessionDuration * 1000;
+        // Console.WriteLine(_seconds);
+        // Console.Write("+");
+        // Thread.Sleep(_seconds);
+        // Console.Write("\b \b");
+        // Console.Write("-"); 
 
 
     }

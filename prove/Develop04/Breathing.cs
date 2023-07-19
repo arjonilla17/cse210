@@ -1,6 +1,7 @@
-public class Breathing{
+public class Breathing :Activity{
 
     Activity activity = new Activity();
+    int result;
     public void breathingBase(){
         Console.WriteLine("Welcome to the Breathing Activity!");
         Console.WriteLine("");
@@ -15,7 +16,8 @@ public class Breathing{
      public void breathingEndMessage(){
         Console.WriteLine("Well done!!");
         Console.WriteLine("");
-        Console.WriteLine($"You have completed another {activity.sessionDuration} seconds of the Breathing Activity.");
+        result = _seconds / 1000;
+        Console.WriteLine($"You have completed another {result} seconds of the Breathing Activity.");
     }
 
 }
