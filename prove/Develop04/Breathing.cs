@@ -1,23 +1,22 @@
-public class Breathing :Activity{
-
-    Activity activity = new Activity();
-    int result;
-    public void breathingBase(){
-        Console.WriteLine("Welcome to the Breathing Activity!");
-        Console.WriteLine("");
-        Console.WriteLine("This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.");
-        Console.WriteLine("");
+class Breathing : Mindfulness
+{
+    public Breathing() : base("Breathing", "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.")
+    {
     }
 
-    public void overideDisplay(){
-        
-    }
+    public override void Start()
+    {
+        base.Start();
+        Console.WriteLine("Let's begin:");
+        for (int i = 1; i <= Duration; i++)
+        {
+            if (i % 2 == 1)
+                Console.WriteLine("Breathe in...");
+            else
+                Console.WriteLine("Breathe out...");
 
-     public void breathingEndMessage(){
-        Console.WriteLine("Well done!!");
-        Console.WriteLine("");
-        result = _seconds / 1000;
-        Console.WriteLine($"You have completed another {result} seconds of the Breathing Activity.");
+            Thread.Sleep(1000);
+        }
+        Finish();
     }
-
 }

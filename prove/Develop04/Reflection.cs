@@ -1,31 +1,48 @@
-public class Reflection{
+class Reflection : Mindfulness
+{
+    private string[] prompts = {
+        "Think of a time when you stood up for someone else.",
+        "Think of a time when you did something really difficult.",
+        "Think of a time when you helped someone in need.",
+        "Think of a time when you did something truly selfless.",
+        "Think of a time when you felt the love of the Savior.",
+        "Think of a time when your overcame discouragment "
+    };
 
-    Activity activity = new Activity();
-    
-
-     private List<string> _prompts = new List<string>();
-
-    private List<string> _usedPrompts = new List<string>();
-    public void reflectionBase(){
-
-        Console.WriteLine("Welcome to the Reflection Activity");
-        Console.WriteLine("");
-        Console.WriteLine("This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
-        Console.WriteLine("");
-
+    public Reflection() : base("Reflection", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.")
+    {
     }
 
-    public void getPrompt(){
+    public override void Start()
+    {
+        base.Start();
+        Console.WriteLine("Let's begin:");
+        Random random = new Random();
 
-    }
+        for (int i = 1; i <= Duration; i++)
+        {
+            string prompt = prompts[random.Next(prompts.Length)];
+            Console.WriteLine(prompt);
+            Thread.Sleep(3000); 
 
-    public void display(){
+            string[] questions = {
+                "Why was this experience meaningful to you?",
+                "Have you ever done anything like this before?",
+                "How did you get started?",
+                "How did you feel when it was complete?",
+                "What made this time different than other times when you were not as successful?",
+                "What is your favorite thing about this experience?",
+                "What could you learn from this experience that applies to other situations?",
+                "What did you learn about yourself through this experience?",
+                "How can you keep this experience in mind in the future?"
+            };
 
-    }
-
-    public void reflectionEndMessage(){
-        Console.WriteLine("Well done!!");
-        Console.WriteLine("");
-        Console.WriteLine($"You have completed another {activity.sessionDuration} seconds of the Reflection Activity.");
+            // foreach (string question in questions)
+            // {
+            //     Console.WriteLine(question);
+            //     Thread.Sleep(2000); 
+            // }
+        }
+        Finish();
     }
 }
